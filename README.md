@@ -7,8 +7,7 @@ This project to do list is made for learning react js in implementing UseState a
 ---
 
 ##  Main Features
-- **Add Task**  
-- **Delete Task**  
+- **Task Management**  
 - **Dark Mode Task**  
 ---
 
