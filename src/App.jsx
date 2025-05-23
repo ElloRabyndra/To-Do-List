@@ -1,18 +1,14 @@
-import { useState } from 'react'
-import './style.css'
+import { useState, useContext } from "react";
+import ThemeSwitch from "./Components/ThemeSwitch";
+import { ThemeContext } from "./Context/ThemeContext";
 
 export default function App() {
-  const [count, setCount] = useState(0)
+  const { theme } = useContext(ThemeContext);
+  const themeClass = theme === "light" ? "light-theme" : "dark-theme";
 
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
-  )
+    <div className={themeClass}>
+      <ThemeSwitch />
+    </div>
+  );
 }
-
