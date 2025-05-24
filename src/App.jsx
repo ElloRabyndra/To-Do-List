@@ -75,6 +75,26 @@ export default function App() {
             ))}
           </ul>
         </div>
+        
+        {/* Statistik tugas */}
+        {tasksList.length > 0 && (
+          <article className={`${checkTheme("bg-gray-50 text-gray-700", "bg-zinc-700 text-gray-300")} mt-4 p-3 sm:px-4 sm:py-3 rounded-2xl transition-theme`}>
+            <div className="flex items-center justify-between text-sm sm:text-base">
+              <div className="flex items-center gap-2">
+                <span className="font-medium">Total Tasks:</span>
+                <span className="px-[12px] py-[4px] text-xs font-bold text-white rounded-full bg-amber-400 sm:text-sm">
+                  {tasksList.length}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-medium">Completed:</span>
+                <span className="px-[10px] py-[4px] text-xs font-bold text-white bg-green-500 rounded-full sm:text-sm">
+                  {tasksList.filter(task => task.done).length}
+                </span>
+              </div>
+            </div>
+          </article>
+        )}
         </main>
     </section>
   );
