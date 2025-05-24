@@ -6,7 +6,7 @@ export const ThemeContext = createContext();
 
 // Membuat Provider untuk Context
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   // Fungsi untuk mengubah tema
   const toggleTheme = () => {
