@@ -7,7 +7,7 @@ const ThemeSwitch = () => {
   return (
     <button className="flex items-center justify-center">
       <div className="relative">
-        {/* Toggle Switch Container */}
+        {/* Toggle Switch */}
         <div 
           className={`
             relative w-16 h-8 rounded-full cursor-pointer transition-all duration-300 ease-in-out
@@ -15,7 +15,7 @@ const ThemeSwitch = () => {
           `}
           onClick={toggleTheme}
         >
-          {/* Slider Circle */}
+          {/* Slider */}
           <div 
             className={`
               absolute top-1 w-6 h-6 bg-white rounded-full shadow-md 
