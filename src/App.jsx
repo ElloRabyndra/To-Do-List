@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import ThemeSwitch from "./Components/ThemeSwitch";
 import { ThemeContext } from "./Context/ThemeContext";
 import Task from "./Components/Task.jsx";
+import GradientBackground from "./Components/GradientBackground.jsx";
 
 export default function App() {
   
@@ -45,6 +46,10 @@ export default function App() {
 
   return (
     <section className={`${checkTheme("bg-gray-50 text-gray-800", "bg-zinc-900 text-white")} font-[Poppins] min-h-screen flex justify-center items-center transition-theme`}>
+
+       {/* Gradient Background Elements */}
+      <GradientBackground checkTheme={checkTheme} />
+      
       <main className={`${checkTheme("bg-white", "bg-zinc-800")} p-6 shadow-sm rounded-3xl min-w-md transition-theme`}>
         {/* Header */}
         <header className="flex items-center justify-between">
